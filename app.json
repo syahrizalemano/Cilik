@@ -1,16 +1,16 @@
 {
-      "name": "GreyCilik",
+      "name": "Cilik",
       "description": "A Powerful  Telegram group management bot with autobots theme.",
       "keywords": [
          "telegram",
          "advance",
          "group",
          "manager",
-         "Prime Mega"
+         "Cilik"
       ],
     
    "logo":    "https://telegra.ph/file/09f3f39dd43de5b66d538.jpg",  
-   "repository": "https://github.com/grey423/GreyCilik",
+   "repository": "https://github.com/grey423/Cilik",
    "addons": [
           {
          "options": {
@@ -51,7 +51,7 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "1885947485"
+         "value": ""
      },
 
       "STRING_SESSION": {
