@@ -2,9 +2,9 @@
   <img src="https://telegra.ph/file/760e7c0afaf6ba3df8ce7.jpg">
 </p>
 
-<h4><p align="center"> 𝐆𝐑𝐄𝐘 𝐂𝐈𝐋𝐈𝐊 </p></h4>
+<h4><p align="center"> 𝐂𝐈𝐋𝐈𝐊 </p></h4>
 
-<p align="center">Grey Cilik is a modular bot running on python3 with autobots theme and have a lot features.</p>
+<p align="center">Cilik is a modular bot running on python3 with autobots theme and have a lot features.</p>
 
 <p align="center">
 <a href="https://t.me/GreyCilik_bot"> <img src="https://img.shields.io/badge/Grey-Cilik-blue?&logo=telegram" alt="Grey on Telegram" /> </a><br>
@@ -23,12 +23,12 @@
 
 ```
 This Bot is Created by Grey Project, If your kanging this without fork at least give a credit to get a smile of my hard work. 
-- Grey Cilik
+- Cilik
 ```
 
 ### Contributors
 - [『TØNIC』 乂 ₭ILLΣR](https://github.com/Tonic990) : Prime Devs
-- [ Grey ](https://github.com/grey423) : Grey Cilik Devs 
+- [ Grey ](https://github.com/grey423) : Cilik Devs 
 
 ### Credit
 - Cutiepii
