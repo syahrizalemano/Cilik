@@ -1,8 +1,8 @@
+<h4><p align="center"> ⭐ 𝐂𝐈𝐋𝐈𝐊 ⭐ </p></h4>
+
 <p align="center">
   <img src="https://telegra.ph/file/a807460d64ac73c5dc83a.jpg">
 </p>
-
-<h4><p align="center"> 𝐂𝐈𝐋𝐈𝐊 </p></h4>
 
 <p align="center">Cilik is a modular bot running on python3 with autobots theme and have a lot features.</p>
 
