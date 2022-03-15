@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://telegra.ph/file/760e7c0afaf6ba3df8ce7.jpg">
+  <img src="https://telegra.ph/file/a807460d64ac73c5dc83a.jpg">
 </p>
 
 <h4><p align="center"> 𝐂𝐈𝐋𝐈𝐊 </p></h4>
