@@ -93,7 +93,7 @@ buttons = [
         ),
     ],
     [
-        InlineKeyboardButton(text="About", callback_data="prime_"
+        InlineKeyboardButton(text="About", callback_data="cilik_"
         ),
         InlineKeyboardButton(
             text="TryInline", switch_inline_query_current_chat=""
@@ -109,7 +109,7 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-PRIME_IMG = "https://telegra.ph/file/6c0dbd0d49bb5fd53d7fe.jpg"
+CILIK_IMG = "https://telegra.ph/file/a807460d64ac73c5dc83a.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @greyyvbss \
@@ -355,11 +355,11 @@ def help_button(update, context):
         pass
 
 
-def prime_about_callback(update, context):
+def cilik_about_callback(update, context):
     query = update.callback_query
-    if query.data == "prime_":
+    if query.data == "cilik_":
         query.message.edit_text(
-            text="๏ I'm *Grey Cilik*, a powerful group management bot built to help you manage your group easily."
+            text="๏ I'm *Cilik*, a powerful group management bot built to help you manage your group easily."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
@@ -373,23 +373,23 @@ def prime_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Admins", callback_data="prime_admin"),
-                    InlineKeyboardButton(text="Notes", callback_data="prime_notes"),
+                    InlineKeyboardButton(text="Admins", callback_data="cilik_admin"),
+                    InlineKeyboardButton(text="Notes", callback_data="cilik_notes"),
                  ],
                  [
-                    InlineKeyboardButton(text="Support", callback_data="prime_support"),
-                    InlineKeyboardButton(text="Credits", callback_data="prime_credit"),
+                    InlineKeyboardButton(text="Support", callback_data="cilik_support"),
+                    InlineKeyboardButton(text="Credits", callback_data="cilik_credit"),
                  ],
                  [
                     InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="prime_back"),
+                    InlineKeyboardButton(text="Go Back", callback_data="cilik_back"),
                  ]
                 ]
             ),
         )
-    elif query.data == "prime_back":
+    elif query.data == "cilik_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
         query.message.edit_text(
@@ -404,7 +404,7 @@ def prime_about_callback(update, context):
                 disable_web_page_preview=True,
         )
 
-    elif query.data == "prime_admin":
+    elif query.data == "cilik_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
             "\nCongragulations, Grey Cilik now ready to manage your group."
@@ -417,11 +417,11 @@ def prime_about_callback(update, context):
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="prime_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="cilik_")]]
             ),
         )
 
-    elif query.data == "prime_notes":
+    elif query.data == "cilik_notes":
         query.message.edit_text(
             text=f"<b>๏ Setting up notes</b>"
             f"\nYou can save message/media/audio or anything as notes"
@@ -429,12 +429,12 @@ def prime_about_callback(update, context):
             f"\n\nYou can also set buttons for notes and filters (refer help menu)",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
-                [[InlineKeyboardButton(text="Go Back", callback_data="prime_")]]
+                [[InlineKeyboardButton(text="Go Back", callback_data="cilik_")]]
             ),
         )
-    elif query.data == "prime_support":
+    elif query.data == "cilik_support":
         query.message.edit_text(
-            text="*๏ GreyCilik support chats*"
+            text="*๏ Cilik support chats*"
             "\nJoin My Support Group/Channel for see or report a problem on GreyCilik.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -444,7 +444,7 @@ def prime_about_callback(update, context):
                     InlineKeyboardButton(text="Updates", url="https://t.me/CilikProject"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="prime_"),
+                    InlineKeyboardButton(text="Go Back", callback_data="cilik_"),
                  
                  ]
                 ]
@@ -452,19 +452,18 @@ def prime_about_callback(update, context):
         )
 
 
-    elif query.data == "prime_credit":
+    elif query.data == "cilik_credit":
         query.message.edit_text(
-            text=f"<b>๏ Credis for Grey Cilik</b>\n"
-            f"\nHere Developers Making The Grey Cilik",
+            text=f"<b>๏ Credits for Cilik</b>\n"
+            f"\nHere Developers Making The Cilik",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Tonic", url="t.me/Bukan_guudlooking"),
                     InlineKeyboardButton(text="Grey", url="t.me/greyyvbss"),
                  ],
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="prime_"),
+                    InlineKeyboardButton(text="Go Back", callback_data="cilik_"),
                  
                  ]
                 ]
@@ -497,7 +496,7 @@ def Source_about_callback(update, context):
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Go Back", callback_data="prime_")
+                    InlineKeyboardButton(text="Go Back", callback_data="cilik_")
                  ]
                 ]
             ),
@@ -815,7 +814,7 @@ def main():
     )
 
     about_callback_handler = CallbackQueryHandler(
-        prime_about_callback, pattern=r"prime_", run_async=True
+        cilik_about_callback, pattern=r"cilik_", run_async=True
     )
 
     source_callback_handler = CallbackQueryHandler(
