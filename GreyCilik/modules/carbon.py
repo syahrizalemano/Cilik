@@ -24,10 +24,13 @@ async def carbon_func(_, message):
     carbon.close()
 
 
+MEMEK = "https://telegra.ph/file/a807460d64ac73c5dc83a.jpg"
+
 @pbot.on_message(filters.command("repo"))
 async def repo(_, message):
-    await message.reply_text(
-        f"""✨ **Hey I'm Grey Cilik** 
+    await message.reply_photo(
+        photo=MEMEK,
+        caption=f"""✨ **Hey I'm Cilik Robot** ✨ 
 **Owner repo : [Grey](https://t.me/greyyvbss)**
 **Python Version :** `{y()}`
 **Library Version :** `{o}`
@@ -38,10 +41,11 @@ async def repo(_, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("Repo", url="https://github.com/grey423/GreyCilik"), 
-                    InlineKeyboardButton("Support", url="https://t.me/CilikSupport")
+                    InlineKeyboardButton(
+                        "Repo", url="https://github.com/grey423/GCilik"), 
+                    InlineKeyboardButton(
+                        "Support", url="https://t.me/CilikSupport")
                 ]
             ]
-        ),
-        disable_web_page_preview=True
+        )
     )
