@@ -279,14 +279,14 @@ async def apk(e):
 __mod_name__ = "Search"
 
 __help__ = """
-❂ /google <query>*:* Perform a google search
-❂ /image <query>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
-❂ /app <appname>*:* Searches for an app in Play Store and returns its details.
-❂ /reverse: Does a reverse image search of the media which it was replied to.
-❂ /gps <location>*:* Get gps location.
-❂ /github <username>*:* Get information about a GitHub user.
-❂ /country <country name>*:* Gathering info about given country
-❂ /imdb <Movie name>*:* Get full info about a movie with imdb.com
-❂ Grey <query>*:* Grey answers the query
-  💡Ex: `Grey where is Japan?`
+✪ /google <query>*:* Perform a google search
+✪ /image <query>*:* Search Google for images and returns them\nFor greater no. of results specify lim, For eg: `/img hello lim=10`
+✪ /app <appname>*:* Searches for an app in Play Store and returns its details.
+✪ /reverse: Does a reverse image search of the media which it was replied to.
+✪ /gps <location>*:* Get gps location.
+✪ /github <username>*:* Get information about a GitHub user.
+✪ /country <country name>*:* Gathering info about given country
+✪ /imdb <Movie name>*:* Get full info about a movie with imdb.com
+✪ Cilik <query>*:* Cilik answers the query
+  💡Ex: `Cilik where is Japan?`
 """
