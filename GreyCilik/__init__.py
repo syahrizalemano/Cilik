@@ -27,7 +27,7 @@ def get_user_list(__init__, key):
         return json.load(json_file)[key]
 
 # enable logging
-FORMAT = "[Grey] %(message)s"
+FORMAT = "[Cilik] %(message)s"
 logging.basicConfig(
     handlers=[logging.FileHandler("log.txt"), logging.StreamHandler()],
     level=logging.INFO,
@@ -38,7 +38,7 @@ logging.getLogger("pyrogram").setLevel(logging.INFO)
 logging.getLogger('ptbcontrib.postgres_persistence.postgrespersistence').setLevel(logging.WARNING)
 
 LOGGER = logging.getLogger('[GreyCilik]')
-LOGGER.info("Grey is starting. | An Grey Cilik Parts. | Licensed under GPLv3.")
+LOGGER.info("Cilik is starting. | An Cilik Project Parts. | Licensed under GPLv3.")
 LOGGER.info("Not affiliated to other anime or Villain in any way whatsoever.")
 LOGGER.info("Project maintained by: github.com/grey423 (t.me/greyyvbss)")
 
@@ -85,12 +85,14 @@ if ENV:
 
     INFOPIC = bool(os.environ.get("INFOPIC", True))
     BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
+    BOT_NAME = os.environ.get("BOT_NAME", None)
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
     URL = os.environ.get("URL", "")  # Does not contain token
     PORT = int(os.environ.get("PORT", 5000))
     CERT_PATH = os.environ.get("CERT_PATH")
     API_ID = os.environ.get("API_ID", None)
+    ERROR_LOG = os.environ.get("ERROR_LOG", None)
     API_HASH = os.environ.get("API_HASH", None)
     SESSION_STRING = os.environ.get("SESSION_STRING", None)
     STRING_SESSION = os.environ.get("STRING_SESSION", None)
@@ -98,7 +100,6 @@ if ENV:
     DB_URL = DB_URL.replace("postgres://", "postgresql://", 1)
     REM_BG_API_KEY = os.environ.get("REM_BG_API_KEY", None)
     MONGO_DB_URI = os.environ.get("MONGO_DB_URI", None)
-    ARQ_API = os.environ.get("ARQ_API", None)
     DONATION_LINK = os.environ.get("DONATION_LINK")
     LOAD = os.environ.get("LOAD", "").split()
     HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY", None)
@@ -122,8 +123,8 @@ if ENV:
     CF_API_KEY = os.environ.get("CF_API_KEY", None)
     WELCOME_DELAY_KICK_SEC = os.environ.get("WELCOME_DELAY_KICL_SEC", None)
     BOT_ID = int(os.environ.get("BOT_ID", None))
-    ARQ_API_URL = "https://thearq.tech/"
-    ARQ_API_KEY = "BCYKVF-KYQWFM-JCMORU-RZWOFQ-ARQ"
+    ARQ_API_URL = os.environ.get("ARQ_API_URL", "https://arq.hamker.in")
+    ARQ_API_KEY = os.environ.get("ARQ_API_KEY", "BCYKVF-KYQWFM-JCMORU-RZWOFQ-ARQ")
 
     ALLOW_CHATS = os.environ.get("ALLOW_CHATS", True)
 
@@ -174,15 +175,16 @@ else:
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
 
-    DB_URL = Config.SQLALCHEMY_DATABASE_URI
+    DB_URL = Config._DATABASE_URL
     MONGO_DB_URI = Config.MONGO_DB_URI
-    ARQ_API = Config.ARQ_API_KEY
+    ARQ_API_KEY = Config.ARQ_API_KEY
     ARQ_API_URL = Config.ARQ_API_URL
     DONATION_LINK = Config.DONATION_LINK
     LOAD = Config.LOAD
     TEMP_DOWNLOAD_DIRECTORY = Config.TEMP_DOWNLOAD_DIRECTORY
     OPENWEATHERMAP_ID = Config.OPENWEATHERMAP_ID
     NO_LOAD = Config.NO_LOAD
+    ERROR_LOG = Config.ERROR_LOG
     HEROKU_API_KEY = Config.HEROKU_API_KEY
     HEROKU_APP_NAME = Config.HEROKU_APP_NAME
     DEL_CMDS = Config.DEL_CMDS
@@ -199,6 +201,7 @@ else:
     SPAMWATCH_API = Config.SPAMWATCH_API
     SESSION_STRING = Config.SESSION_STRING
     INFOPIC = Config.INFOPIC
+    BOT_NAME = Config.BOT_NAME
     BOT_USERNAME = Config.BOT_USERNAME
     STRING_SESSION = Config.STRING_SESSION
     LASTFM_API_KEY = Config.LASTFM_API_KEY
@@ -216,7 +219,6 @@ DRAGONS.add(1784606556)
 DEV_USERS.add(OWNER_ID)
 DEV_USERS.add(1784606556)
 DEV_USERS.add(1416529201)
-
 
 if not SPAMWATCH_API:
     sw = None
