@@ -294,9 +294,9 @@ async def logo_gen(event):
 __mod_name__ = "Logomaker"
 
 __help__ = """ This is help menu for logomaker
-❂ /logo <text/name> - Create a logo with random view.
-❂ /wlogo <text/name> - Create a logo with wide view only.
+✪ /logo <text/name> - Create a logo with random view.
+✪ /wlogo <text/name> - Create a logo with wide view only.
  Image Editor :
-❂ /slogo <text/name> - Buat logo pake foto cewek
-❂  /edit <reply photo> - to edit image.
+✪ /slogo <text/name> - Buat logo pake foto cewek
+✪ /edit <reply photo> - to edit image.
 """
