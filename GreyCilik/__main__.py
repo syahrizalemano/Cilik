@@ -15,6 +15,9 @@ from GreyCilik import (
     ALLOW_EXCL,
     CERT_PATH,
     DONATION_LINK,
+    BOT_USERNAME as bu,
+    BOT_NAME as bn,
+    OWNER_USERNAME as own,
     LOGGER,
     OWNER_ID,
     PORT,
@@ -81,26 +84,30 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
- *ʜᴇʟʟᴏ ᴀᴋᴜ ɢʀᴇʏ ᴄɪʟɪᴋ*
-ɢʀᴇʏ ᴄɪʟɪᴋ ᴀᴅᴀʟᴀʜ ʙᴏᴛ ᴍᴀɴᴀɢᴇʀ + ᴍᴜꜱɪᴄ ᴜɴᴛᴜᴋ ᴍᴇɴɢᴇʟᴏʟᴀ ɢʀᴜᴘ ᴀɴᴅᴀ ᴅᴇɴɢᴀɴ ʙᴀɪᴋ.
-ᴛᴇᴋᴀɴ /help . ᴍᴀɪɴᴛᴀɴᴇᴅ ʙʏ [Grey](t.me/greyyvbss).
+*Hello {} !*
+✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/a807460d64ac73c5dc83a.jpg)
+️➖➖➖➖➖➖➖➖➖➖➖➖➖
+❖ *Uptime:* `{}`
+❖ `{}` *users, across* `{}` *chats.*
+️➖➖➖➖➖➖➖➖➖➖➖➖➖
+✪ Hit /help to see my available commands.
 """
 
 buttons = [
         [
         InlineKeyboardButton(
-            text="➕️ Add Grey Cilik to your group ➕️", url="t.me/GreyCilik_bot?startgroup=true"
+            text="➕️ Add Me to your group ➕️", url=f"t.me/{bu}?startgroup=true"
         ),
     ],
     [
-        InlineKeyboardButton(text="About", callback_data="cilik_"
+        InlineKeyboardButton(text="🤖 About", callback_data="cilik_"
         ),
         InlineKeyboardButton(
-            text="TryInline", switch_inline_query_current_chat=""
+            text="🧸 Owner", url=f"t.me/{own}"
         ),
     ],
     [
-        InlineKeyboardButton(text="Help & Commands❔", callback_data="help_back"
+        InlineKeyboardButton(text="Help & Commands ❓", callback_data="help_back"
         ),
     ],
 ]
@@ -228,7 +235,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_text(
-            f"<b>Hi I'm Grey Cilik!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
+            f"<b>Hi I'm {bn}!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
             parse_mode=ParseMode.HTML
        )
 
@@ -360,14 +367,14 @@ def cilik_about_callback(update, context):
     if query.data == "cilik_":
         query.message.edit_text(
             text="๏ I'm *Cilik*, a powerful group management bot built to help you manage your group easily."
-            "\n• I can restrict users."
-            "\n• I can greet users with customizable welcome messages and even set a group's rules."
-            "\n• I have an advanced anti-flood system."
-            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n• I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_GreyCilik's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for GreyCilik.",
+            "\n✪ I can restrict users."
+            "\n✪ I can greet users with customizable welcome messages and even set a group's rules."
+            "\n✪ I have an advanced anti-flood system."
+            "\n✪ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
+            "\n✪ I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
+            "\n✪ I check for admins' permissions before executing any command and more stuffs"
+            "\n\n_Cilik's licensed under the GNU General Public License v3.0_"
+            "\n\n Click on button bellow to get basic help for Cilik.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -435,7 +442,7 @@ def cilik_about_callback(update, context):
     elif query.data == "cilik_support":
         query.message.edit_text(
             text="*๏ Cilik support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on GreyCilik.",
+            "\nJoin My Support Group/Channel for see or report a problem on Cilik.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -476,21 +483,21 @@ def Source_about_callback(update, context):
         query.message.edit_text(
             text="๏›› This advance command for Musicplayer."
             "\n\n๏ Command for admins only."
-            "\n • `/reload` - For refreshing the adminlist."
-            "\n • `/userbotjoin` - For inviting the assistant to your groups."
-            "\n • `/userbotleave` - Use this if you want the assistant leaving your groups."
-            "\n • `/pause` - To pause the playback."
-            "\n • `/vpause` - To pause video stream."
-            "\n • `/resume` - To resuming the playback You've paused."
-            "\n • `/vresume` - To resuming video stream."
-            "\n • `/skip` - To skipping the player."
-            "\n • `/vskip` - To skipping the video stream."
-            "\n • `/end` - For end the playback."
-            "\n • `/vend` - For end the video stream."
-            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
+            "\n ✪ `/reload` - For refreshing the adminlist."
+            "\n ✪ `/userbotjoin` - For inviting the assistant to your groups."
+            "\n ✪ `/userbotleave` - Use this if you want the assistant leaving your groups."
+            "\n ✪ `/pause` - To pause the playback."
+            "\n ✪ `/vpause` - To pause video stream."
+            "\n ✪ `/resume` - To resuming the playback You've paused."
+            "\n ✪ `/vresume` - To resuming video stream."
+            "\n ✪ `/skip` - To skipping the player."
+            "\n ✪ `/vskip` - To skipping the video stream."
+            "\n ✪ `/end` - For end the playback."
+            "\n ✪ `/vend` - For end the video stream."
+            "\n ✪ `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
             "\n\n๏ Command for all members."
-            "\n • `/play` or `/ytp` <query> - Playing music via YouTube."
-            "\n • `/vplay` <query or reply audio> - Playing video from YouTube.",
+            "\n ✪ `/play` or `/ytp` <query> - Playing music via YouTube."
+            "\n ✪ `/vplay` <query or reply audio> - Playing video from YouTube.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -787,10 +794,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                f"""**Grey Cilik Started!**
-
-**Python:** `{memek()}`
-**Telegram Library:** `v{peler}`""",
+                f"""*{bn} Started!* 🤖\n\n*Python:* 3.9.10\n*Pyrogram:* 1.4.12\n*PyTgCalls:* 0.9.0 Beta 1""",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
