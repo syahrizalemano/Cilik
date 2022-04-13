@@ -5,8 +5,8 @@ wget
 gtts
 beautifulsoup4
 requests
-python-telegram-bot==13.10.0
-SQLAlchemy==1.4.29
+python-telegram-bot==13.11.0
+SQLAlchemy==1.4.31
 psycopg2-binary
 feedparser
 faker
@@ -23,7 +23,7 @@ psutil
 aiohttp
 Pillow
 CurrencyConverter
-googletrans
+googletrans==4.0.0rc1
 google-trans-new
 jikanpy
 speedtest-cli
@@ -32,7 +32,7 @@ regex
 bleach
 wikipedia
 markdown2
-telethon==1.24.0
+telethon
 telegraph
 heroku3
 spamwatch
@@ -43,10 +43,10 @@ ujson
 pretty_errors
 pygithub
 TgCrypto
-Pyrogram
+pyrogram
 PyDictionary
-yt-dlp
-youtube_search_python
+git+https://github.com/Sorrybabe/downloader
+youtube_search_python==1.4.9
 youtube_search
 lyrics_extractor
 asyncio
@@ -61,6 +61,7 @@ countryinfo
 html2text
 bs4
 redis
+pybase64
 pySmartDL
 bing_image_downloader
 search_engine_parser
@@ -85,9 +86,9 @@ fuzzysearch
 img2pdf
 multicolorcaptcha
 git+https://github.com/python-telegram-bot/ptbcontrib.git
-hiredis
-pretty_errors
-requests_html
-ShazamAPI
-html-telegraph-poster
-qrcode
+hiredis	
+pretty_errors	
+requests_html	
+ShazamAPI	
+html-telegraph-poster	
+qrcode	
