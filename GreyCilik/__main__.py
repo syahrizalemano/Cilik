@@ -87,8 +87,8 @@ PM_START_TEXT = """
 *Hello {} !*
 ✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/a807460d64ac73c5dc83a.jpg)
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
-❖ *Uptime:* `{}`
-❖ `{}` *users, across* `{}` *chats.*
+✪ *Uptime:* `{}`
+✪ `{}` *users, across* `{}` *chats.*
 ️➖➖➖➖➖➖➖➖➖➖➖➖➖
 ✪ Hit /help to see my available commands.
 """
