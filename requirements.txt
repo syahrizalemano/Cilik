@@ -125,6 +125,7 @@ pymongo
 dnspython
 secureme
 apscheduler
+search_engine_parser
 emoji-country-flag
 countryinfo
 html2text
