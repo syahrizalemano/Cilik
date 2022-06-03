@@ -84,7 +84,6 @@ if ENV:
         raise Exception("Your tiger users list does not contain valid integers.")
 
     INFOPIC = bool(os.environ.get("INFOPIC", True))
-    BOT_USERNAME = os.environ.get("BOT_USERNAME", None)
     BOT_NAME = os.environ.get("BOT_NAME", None)
     EVENT_LOGS = os.environ.get("EVENT_LOGS", None)
     WEBHOOK = bool(os.environ.get("WEBHOOK", False))
@@ -202,7 +201,6 @@ else:
     SESSION_STRING = Config.SESSION_STRING
     INFOPIC = Config.INFOPIC
     BOT_NAME = Config.BOT_NAME
-    BOT_USERNAME = Config.BOT_USERNAME
     STRING_SESSION = Config.STRING_SESSION
     LASTFM_API_KEY = Config.LASTFM_API_KEY
     CF_API_KEY = Config.CF_API_KEY
