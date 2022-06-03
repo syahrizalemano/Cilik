@@ -66,10 +66,6 @@
          "description": "Username bot Anda tanpa @",
          "value": "GreyCilik_bot"
       },
-      "BOT_NAME": {
-         "description": "Masukan Nama Bot Kamu",
-         "value": "Cilik Robot"            
-      },
       "BOT_ID": {
          "description": "Masukan Id Bot Anda",
          "value": ""
