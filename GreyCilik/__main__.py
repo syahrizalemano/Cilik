@@ -16,8 +16,6 @@ from GreyCilik import (
     CERT_PATH,
     DONATION_LINK,
     BOT_USERNAME as bu,
-    BOT_NAME as bn,
-    OWNER_USERNAME as own,
     LOGGER,
     OWNER_ID,
     PORT,
@@ -85,30 +83,27 @@ def get_readable_time(seconds: int) -> str:
 
 PM_START_TEXT = """
 *Hello {} !*
-✪ I'm an anime-theme management bot [✨](https://telegra.ph/file/a807460d64ac73c5dc83a.jpg)
-️➖➖➖➖➖➖➖➖➖➖➖➖➖
-✪ *Uptime:* `{}`
-✪ `{}` *users, across* `{}` *chats.*
-️➖➖➖➖➖➖➖➖➖➖➖➖➖
+✪ I'm an anime-theme management bot [✨]()
+────────────────────────
+× *Uptime:* `{}`
+× `{}` *users, across* `{}` *chats.*
+────────────────────────
 ✪ Hit /help to see my available commands.
 """
 
 buttons = [
-        [
+    [
         InlineKeyboardButton(
-            text="➕️ Add Me to your group ➕️", url=f"t.me/{bu}?startgroup=true"
+            text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+    ],
+    [
+        InlineKeyboardButton(text="Get Help ❓", callback_data="help_back"),
+        InlineKeyboardButton(
+            text="Support 💌, url=f"t.me/{SUPPORT_CHAT}"
         ),
     ],
     [
-        InlineKeyboardButton(text="🤖 About", callback_data="cilik_"
-        ),
-        InlineKeyboardButton(
-            text="🧸 Owner", url=f"t.me/{own}"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="Help & Commands ❓", callback_data="help_back"
-        ),
+        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
     ],
 ]
 
@@ -116,10 +111,9 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-CILIK_IMG = "https://telegra.ph/file/a807460d64ac73c5dc83a.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @greyyvbss \
+ You can support the project by contacting @excrybaby \
  Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
@@ -231,11 +225,11 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
-                disable_web_page_preview=True,
+                disable_web_page_preview=False,
             )
     else:
         update.effective_message.reply_text(
-            f"<b>Hi I'm {bn}!</b>\n<b>Started working since:</b> <code>{uptime}</code>",
+            f"👋 Hi, I'm {dispatcher.bot.first_name}. Nice to meet You.",
             parse_mode=ParseMode.HTML
        )
 
@@ -366,15 +360,15 @@ def cilik_about_callback(update, context):
     query = update.callback_query
     if query.data == "cilik_":
         query.message.edit_text(
-            text="๏ I'm *Cilik*, a powerful group management bot built to help you manage your group easily."
-            "\n✪ I can restrict users."
-            "\n✪ I can greet users with customizable welcome messages and even set a group's rules."
-            "\n✪ I have an advanced anti-flood system."
-            "\n✪ I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
-            "\n✪ I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
-            "\n✪ I check for admins' permissions before executing any command and more stuffs"
-            "\n\n_Cilik's licensed under the GNU General Public License v3.0_"
-            "\n\n Click on button bellow to get basic help for Cilik.",
+            text=f"๏ I'm *{dispatcher.bot.first_name}*, a powerful group management bot built to help you manage your group easily."
+            "\n• I can restrict users."
+            "\n• I can greet users with customizable welcome messages and even set a group's rules."
+            "\n• I have an advanced anti-flood system."
+            "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
+            "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
+            "\n• I check for admins' permissions before executing any command and more stuffs"
+            f"\n\n_{dispatcher.bot.first_name}'s licensed under the GNU General Public License v3.0_"
+            f"\n\n Click on button bellow to get basic help for {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -388,7 +382,7 @@ def cilik_about_callback(update, context):
                     InlineKeyboardButton(text="Credits", callback_data="cilik_credit"),
                  ],
                  [
-                    InlineKeyboardButton(text="Musicplayer", callback_data="source_"),
+                    InlineKeyboardButton(text="Source Code", url="https://github.com"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="cilik_back"),
@@ -408,13 +402,13 @@ def cilik_about_callback(update, context):
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
-                disable_web_page_preview=True,
+                disable_web_page_preview=False,
         )
 
     elif query.data == "cilik_admin":
         query.message.edit_text(
             text=f"*๏ Let's make your group bit effective now*"
-            "\nCongragulations, Grey Cilik now ready to manage your group."
+            f"\nCongragulations, {dispatcher.bot.first_name} now ready to manage your group."
             "\n\n*Admin Tools*"
             "\nBasic Admin tools help you to protect and powerup your group."
             "\nYou can ban members, Kick members, Promote someone as admin through commands of bot."
@@ -441,8 +435,8 @@ def cilik_about_callback(update, context):
         )
     elif query.data == "cilik_support":
         query.message.edit_text(
-            text="*๏ Cilik support chats*"
-            "\nJoin My Support Group/Channel for see or report a problem on Cilik.",
+            text="*๏ cilik support chats*"
+            f"\nJoin My Support Group/Channel for see or report a problem on {dispatcher.bot.first_name}.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
@@ -461,17 +455,33 @@ def cilik_about_callback(update, context):
 
     elif query.data == "cilik_credit":
         query.message.edit_text(
-            text=f"<b>๏ Credits for Cilik</b>\n"
-            f"\nHere Developers Making The Cilik",
-            parse_mode=ParseMode.HTML,
+            text=f"๏ Credis for {dispatcher.bot.first_name}\n"
+            f"\nHere Developers Making And Give Inspiration For Made The {dispatcher.bot.first_name}",
+            parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="Grey", url="t.me/greyyvbss"),
+                    InlineKeyboardButton(text="sena-ex", url="https://github.com/kennedy-ex"),
+                    InlineKeyboardButton(text="TheHamkerCat", url="https://github.com/TheHamkerCat"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Feri", url="https://github.com/FeriEXP"),
+                    InlineKeyboardButton(text="riz-ex", url="https://github.com/riz-ex"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Anime Kaizoku", url="https://github.com/animekaizoku"),
+                    InlineKeyboardButton(text="TheGhost Hunter", url="https://github.com/HuntingBots"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Inuka Asith", url="https://github.com/inukaasith"),
+                    InlineKeyboardButton(text="Noob-Kittu", url="https://github.com/noob-kittu"),
+                 ],
+                 [
+                    InlineKeyboardButton(text="Queen Arzoo", url="https://github.com/QueenArzoo"),
+                    InlineKeyboardButton(text="Paul Larsen", url="https://github.com/PaulSonOfLars"),
                  ],
                  [
                     InlineKeyboardButton(text="Go Back", callback_data="cilik_"),
-                 
                  ]
                 ]
             ),
@@ -483,21 +493,15 @@ def Source_about_callback(update, context):
         query.message.edit_text(
             text="๏›› This advance command for Musicplayer."
             "\n\n๏ Command for admins only."
-            "\n ✪ `/reload` - For refreshing the adminlist."
-            "\n ✪ `/userbotjoin` - For inviting the assistant to your groups."
-            "\n ✪ `/userbotleave` - Use this if you want the assistant leaving your groups."
-            "\n ✪ `/pause` - To pause the playback."
-            "\n ✪ `/vpause` - To pause video stream."
-            "\n ✪ `/resume` - To resuming the playback You've paused."
-            "\n ✪ `/vresume` - To resuming video stream."
-            "\n ✪ `/skip` - To skipping the player."
-            "\n ✪ `/vskip` - To skipping the video stream."
-            "\n ✪ `/end` - For end the playback."
-            "\n ✪ `/vend` - For end the video stream."
-            "\n ✪ `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
+            "\n • `/reload` - For refreshing the adminlist."
+            "\n • `/pause` - To pause the playback."
+            "\n • `/resume` - To resuming the playback You've paused."
+            "\n • `/skip` - To skipping the player."
+            "\n • `/end` - For end the playback."
+            "\n • `/musicplayer <on/off>` - Toggle for turn ON or turn OFF the musicplayer."
             "\n\n๏ Command for all members."
-            "\n ✪ `/play` or `/ytp` <query> - Playing music via YouTube."
-            "\n ✪ `/vplay` <query or reply audio> - Playing video from YouTube.",
+            "\n • `/play` <query /reply audio> - Playing music via YouTube."
+            "\n • `/playlist` - To playing a playlist of groups or your personal playlist",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
@@ -519,7 +523,7 @@ def Source_about_callback(update, context):
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
-                disable_web_page_preview=True,
+                disable_web_page_preview=False,
         )
 
 def get_help(update: Update, context: CallbackContext):
@@ -552,7 +556,7 @@ def get_help(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(
-                            text="Help & Command ❓",
+                            text="Help",
                             url="t.me/{}?start=help".format(context.bot.username),
                         )
                     ]
@@ -745,7 +749,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 1784606556:
+        if OWNER_ID != 1866066766:
             update.effective_message.reply_text(
                 "I'm free for everyone ❤️ If you wanna make me smile, just join"
                 "[My Channel]({})".format(DONATION_LINK),
@@ -794,7 +798,7 @@ def main():
         try:
             dispatcher.bot.sendMessage(
                 f"@{SUPPORT_CHAT}", 
-                f"""*{bn} Started!* 🤖\n\n*Python:* 3.9.10\n*Pyrogram:* 1.4.12\n*PyTgCalls:* 0.9.0 Beta 1""",
+                "👋 Hi, i'm alive.",
                 parse_mode=ParseMode.MARKDOWN
             )
         except Unauthorized:
