@@ -1,6 +1,7 @@
 {
       "name": "Cilik Robot",
       "description": "A Powerful  Telegram group management bot with anime theme.",
+      "stack": "heroku-22",
       "keywords": [
          "telegram",
          "advance",
