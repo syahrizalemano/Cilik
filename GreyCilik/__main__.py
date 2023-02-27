@@ -104,7 +104,7 @@ buttons = [
                     InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/keenan/tip")
                 ]        
             ]
-
+        ]
 
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
