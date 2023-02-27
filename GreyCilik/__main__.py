@@ -80,12 +80,6 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-await event.reply(
-    file = types.InputDocument(
-        id = "CAACAgQAAx0CcPwUGwADS2P8fDzqsmxK5sHTuZdjuiQyzAXMAAKsCAACbvG5U0OIgtlJ0fEFLgQ"
-    )
-)
-
 PM_START_TEXT = """
 *Hello {} !*
 I'm an management bot 
@@ -116,6 +110,8 @@ HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
 CILIK_IMG = "https://ibb.co/swyBVGy"
+
+STICKER_ID = "CAACAgQAAx0CcPwUGwADS2P8fDzqsmxK5sHTuZdjuiQyzAXMAAKsCAACbvG5U0OIgtlJ0fEFLgQ"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @greyyvbss \
