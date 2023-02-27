@@ -47,7 +47,7 @@
       "OWNER_ID": {
          "description": "Masukan Id Akun Tele Kamu.",
          "required": true,
-         "value": "1784606556"
+         "value": "2108066870"
      },
 
       "STRING_SESSION": {
@@ -74,12 +74,12 @@
 
       "OWNER_USERNAME": {
          "description": "Username Anda tanpa @",
-         "value": "greyyvbss"
+         "value": "k"
       },
       "SUPPORT_CHAT": {
          "description": "Masukan Username Grup Anda, Masukan Tanpa @.",
          "required": true,
-         "value": "CilikSupport"
+         "value": "k"
       },
       "MONGO_DB_URI": {
          "description": "Masukan MongoDb Database, Dapatkan di (MongoDB.com).",
@@ -97,12 +97,12 @@
      "EVENT_LOGS": {
          "description": "Masukan Id Grup Logs, Buatlah Grup Publik dan masukan bot anda, id grup pakai awalan -100",
          "required": true,
-         "value": "-1001692951846"
+         "value": "-1001895568411"
       },
       "JOIN_LOGGER": {
          "description": "Masukan Id Grup, bisa disamakan dengan vars event logs diatas.",
          "required": true,
-         "value": "-1001692951846"
+         "value": "-1001895568411"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
