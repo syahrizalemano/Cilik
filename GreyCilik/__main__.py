@@ -82,7 +82,7 @@ def get_readable_time(seconds: int) -> str:
 
 await event.reply(
     file = types.InputDocument(
-        id = CAACAgQAAx0CcPwUGwADS2P8fDzqsmxK5sHTuZdjuiQyzAXMAAKsCAACbvG5U0OIgtlJ0fEFLgQ
+        id = "CAACAgQAAx0CcPwUGwADS2P8fDzqsmxK5sHTuZdjuiQyzAXMAAKsCAACbvG5U0OIgtlJ0fEFLgQ"
 
 PM_START_TEXT = """
 *Hello {} !*
