@@ -203,7 +203,7 @@ Saya Di Aktifkan oleh KEENAN
             [
                 [
                     InlineKeyboardButton(
-                        "KEENANS", url=f"t.me/amkeenanx"),
+                        "About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
                     InlineKeyboardButton(
                         "ᴛᴀᴍʙᴀʜᴋᴀɴ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
