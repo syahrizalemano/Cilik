@@ -88,7 +88,6 @@ Saya Di Aktifkan oleh KEENAN
 ☑️ Klik tombol bantuan untuk informasi lebih lanjut
 """,
 buttons = [
-            [
                 [
                     InlineKeyboardButton(
                         "About {dispatcher.bot.first_name} 🤖", callback_data="cilik_")
@@ -102,8 +101,7 @@ buttons = [
                 [
                     InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"https://github.com"),
                     InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/keenan/tip")
-                ]        
-            ]
+                ]       
         ]
 
 HELP_STRINGS = """
