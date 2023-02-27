@@ -93,7 +93,7 @@ buttons = [
                     InlineKeyboardButton(
                         "KEENAN", url=f"https://t.me/amkeenanx"),
                     InlineKeyboardButton(
-                        "➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+                        "➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new")],
                 [
                     InlineKeyboardButton(
                         "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"), 
