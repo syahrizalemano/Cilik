@@ -80,31 +80,7 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
-PM_START_TEXT = """
-*Hello {} !*
-I'm an management bot 
-× *Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
-
- Hit /help to see my available commands.
-"""
-
-buttons = [
-    [
-        InlineKeyboardButton(
-            text="➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
-    ],
-    [
-        InlineKeyboardButton(text="Get Help ❓", callback_data="help_back"),
-        InlineKeyboardButton(
-            text="Support 💌", url=f"t.me/{SUPPORT_CHAT}"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text=f"About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
-    ],
-]
-
+BOT_USERNAME = "keenanbot"
 
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
@@ -215,8 +191,35 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
+            update.effective_message.reply_sticker("CAACAgUAAxkBAAFF-KFg-jaEvlhu_kNknYQjxsuyDvp--AACjAMAAtpWSVeocCICILIfRSAE")
             update.effective_message.reply_text(
-                PM_START_TEXT.format(
+f"""👋🏻 Hallo, Nama saya [{PROJECT_NAME}](https://telegra.ph/file/ed136c19e7f6afddb4912.jpg)
+Saya Di Aktifkan oleh KEENAN
+・✦▭▭▭▭✧◦✦◦✧▭▭▭▭✦ ・
+☑️ Bot manage yang dapat mengelola Group
+☑️ Klik tombol bantuan untuk informasi lebih lanjut
+""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "KEENANS", url=f"t.me/amkeenanx"),
+                    InlineKeyboardButton(
+                        "ᴛᴀᴍʙᴀʜᴋᴀɴ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                [
+                    InlineKeyboardButton(
+                        "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/keenansupport"), 
+                    InlineKeyboardButton(
+                        "ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/keenansupport")],
+                [
+                    InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"https://github.com"),
+                    InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/keenan/tip")
+                ]        
+            ]
+        ),
+        reply_to_message_id=message.message_id
+        )
+                                                
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
