@@ -91,21 +91,19 @@ Saya Di Aktifkan oleh KEENAN
 buttons = [
                 [
                     InlineKeyboardButton(
-                        "About {dispatcher.bot.first_name} 🤖", callback_data="cilik_")
-                ],
+                        "KEENAN", url=f"https://t.me/amkeenanx"),
                     InlineKeyboardButton(
-                        "➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
+                        "ᴛᴀᴍʙᴀʜᴋᴀɴ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/keenansupport"), 
-                ],
+                        "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"), 
                     InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/keenansupport")],
+                        "ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/{UPDATES_CHANNEL}")],
                 [
-                    InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"https://github.com"),
-                    InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/keenan/tip")
-                ]       
-        ]
+                    InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"{SOURCE_CODE}"),
+                    InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip")
+                ]        
+            ]
 
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
