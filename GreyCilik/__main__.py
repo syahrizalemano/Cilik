@@ -54,7 +54,7 @@ from telegram.ext import (
 )
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
-
+from telethon import types
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -80,15 +80,17 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time
 
+await event.reply(
+    file = types.InputDocument(
+        id = CAACAgQAAx0CcPwUGwADS2P8fDzqsmxK5sHTuZdjuiQyzAXMAAKsCAACbvG5U0OIgtlJ0fEFLgQ
 
 PM_START_TEXT = """
 *Hello {} !*
-I'm an management bot [✨](https://ibb.co/swyBVGy)
-────────────────────────
+I'm an management bot 
 × *Uptime:* `{}`
 × `{}` *users, across* `{}` *chats.*
-────────────────────────
-✪ Hit /help to see my available commands.
+
+ Hit /help to see my available commands.
 """
 
 buttons = [
