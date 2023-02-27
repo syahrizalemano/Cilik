@@ -81,7 +81,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 PM_START_TEXT = """
-👋🏻 Hallo, Nama saya BOT MANAGE (https://telegra.ph/file/ed136c19e7f6afddb4912.jpg)
+👋🏻 Hallo, Nama saya BOT MANAGE
 Saya Di Aktifkan oleh KEENAN
 ・✦▭▭▭▭✧◦✦◦✧▭▭▭▭✦ ・
 ☑️ Bot manage yang dapat mengelola Group
@@ -215,6 +215,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_sticker("CAACAgUAAxkBAAFF-KFg-jaEvlhu_kNknYQjxsuyDvp--AACjAMAAtpWSVeocCICILIfRSAE")
+            update.evective_message.reply_photo("https://telegra.ph/file/ed136c19e7f6afddb4912.jpg")
             update.effective_message.reply_text(
                 PM_START_TEXT.format(
                     escape_markdown(first_name),
