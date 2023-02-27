@@ -91,9 +91,9 @@ buttons = [
             [
                 [
                     InlineKeyboardButton(
-                        "About {dispatcher.bot.first_name} 🤖", callback_data="cilik_"),
+                        "About {dispatcher.bot.first_name} 🤖", callback_data="cilik_")
                     InlineKeyboardButton(
-                        "ᴛᴀᴍʙᴀʜᴋᴀɴ ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
                 [
                     InlineKeyboardButton(
                         "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/keenansupport"), 
