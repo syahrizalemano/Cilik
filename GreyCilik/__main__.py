@@ -85,17 +85,20 @@ PM_START_TEXT = """
 Saya Di Aktifkan oleh KEENAN
 ・✦▭▭▭▭✧◦✦◦✧▭▭▭▭✦ ・
 ☑️ Bot manage yang dapat mengelola Group
-☑️ Klik tombol bantuan untuk informasi lebih lanjut
-""",
+☑️ Klik tombol bantuan untuk informasi lebih lanjut.
+"""
+
 buttons = [
                 [
                     InlineKeyboardButton(
                         "About {dispatcher.bot.first_name} 🤖", callback_data="cilik_")
+                ],
                     InlineKeyboardButton(
                         "➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new"),
                 [
                     InlineKeyboardButton(
                         "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/keenansupport"), 
+                ],
                     InlineKeyboardButton(
                         "ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/keenansupport")],
                 [
