@@ -96,12 +96,12 @@ buttons = [
                         "➗ Add Me To Your Group ➗", url=f"t.me/{bu}?startgroup=new")],
                 [
                     InlineKeyboardButton(
-                        "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/{SUPPORT_GROUP}"), 
+                        "👥 ɢʀᴏᴜᴘ", url=f"https://t.me/keenan"), 
                     InlineKeyboardButton(
-                        "ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/{UPDATES_CHANNEL}")],
+                        "ᴄʜᴀɴɴᴇʟ 📣", url=f"https://t.me/keenan")],
                 [
-                    InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"{SOURCE_CODE}"),
-                    InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenkansaja/tip")
+                    InlineKeyboardButton("🌟 ɢɪᴛ ʜᴜʙ 🌟", url=f"https://github.com"),
+                    InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/kenaan/tip")
                 ]        
             ]
 
