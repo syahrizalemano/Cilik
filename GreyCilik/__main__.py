@@ -81,13 +81,13 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 PM_START_TEXT = """
-f"""👋🏻 Hallo, Nama saya BOT MANAGE (https://telegra.ph/file/ed136c19e7f6afddb4912.jpg)
+👋🏻 Hallo, Nama saya BOT MANAGE (https://telegra.ph/file/ed136c19e7f6afddb4912.jpg)
 Saya Di Aktifkan oleh KEENAN
 ・✦▭▭▭▭✧◦✦◦✧▭▭▭▭✦ ・
 ☑️ Bot manage yang dapat mengelola Group
 ☑️ Klik tombol bantuan untuk informasi lebih lanjut
 """,
-        reply_markup=InlineKeyboardMarkup(
+buttons = [
             [
                 [
                     InlineKeyboardButton(
@@ -104,7 +104,6 @@ Saya Di Aktifkan oleh KEENAN
                     InlineKeyboardButton("💵 ꜱᴀᴡᴇʀɴʏᴀ", url="https://trakteer.id/keenan/tip")
                 ]        
             ]
-            """
 
 
 HELP_STRINGS = """
