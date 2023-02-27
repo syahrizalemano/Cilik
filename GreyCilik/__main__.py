@@ -111,8 +111,6 @@ Click on the button bellow to get description about specifics command."""
 
 CILIK_IMG = "https://ibb.co/swyBVGy"
 
-STICKER_ID = "CAACAgQAAx0CcPwUGwADS2P8fDzqsmxK5sHTuZdjuiQyzAXMAAKsCAACbvG5U0OIgtlJ0fEFLgQ"
-
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @greyyvbss \
  Supporting isnt always financial! \
